@@ -28,9 +28,8 @@ namespace Publisher
 
                 channel.BasicConsume("some-queue", true, consumer);
                 Console.WriteLine("It subscribe our consumer to some-queue !");
-            }
-
-            Console.ReadKey();
+                Console.ReadLine();
+            }            
         }
     }
 }
