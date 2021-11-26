@@ -18,13 +18,12 @@ namespace Publisher
             {
                 channel.QueueDeclare("some-queue",false,false,false,null);
 
-                var message = "Some meassage for some queue";
+                var message = "Some message for some queue";
                 var body = Encoding.UTF8.GetBytes(message);
-                channel.BasicPublish(exchange: "", routingKey: "some-queue", basicProperties:null, body:body);
-
-                Console.WriteLine("Message sent to default exchange !");
+                channel.BasicPublish(exchange: "", routingKey: "some-queue", basicProperties:null, body:body);                
             }
-            
+
+            Console.WriteLine("Message sent to default exchange !");
             Console.ReadKey();
         }
     }
